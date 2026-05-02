@@ -1,6 +1,6 @@
 {% set name = "scoringrules" %}
-{% set version = "0.9.0" %}
-{% set python_min = "3.10" %}
+{% set version = "0.10.0" %}
+{% set python_min = "3.11" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/scoringrules-{{ version }}.tar.gz
-  sha256: 2c25604d00349d8890e7e52bb9e77cd9e28b2ba5df463c4b986122707d36be3c
+  sha256: a92ea7863f0ce09820af3e5e66166de2c65ad06026bafbb45293a84780526e30
 
 build:
   noarch: python
