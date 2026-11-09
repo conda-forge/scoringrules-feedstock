@@ -1,5 +1,5 @@
 {% set name = "scoringrules" %}
-{% set version = "0.11.0" %}
+{% set version = "0.12.0" %}
 {% set python_min = "3.12" %}
 
 package:
@@ -7,8 +7,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/scoringrules-{{ version }}.tar.gz
-  sha256: 434d53c292bc319d080657dfdda99a3f6a5ceac45687d0f1218f8180e02a259d
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/scoringrules-{{ version }}.tar.gz
+  sha256: d18b7eae84030dc0932cb0c9b6eabcab12cc5fe1f2359bcdce3c983b1daf7639
 
 build:
   noarch: python
@@ -22,8 +22,9 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - numpy >=1.25.0
-    - scipy >=1.10.0
+    - numpy >=2.0.0
+    - scipy >=1.14.0
+    - array-api-compat >=1.9
 
 test:
   imports:
